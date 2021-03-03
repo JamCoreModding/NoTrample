@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "notramplefabric",
+  "version": "${version}",
+  "name": "NoTrample",
+  "description": "Stops you from trampling crops",
+  "authors": [
+    "Jamalam360"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/notramplefabric/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.jamalam360.NoTrample"
+    ],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "notramplefabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.2",
+    "fabric": "*"
+  }
+}
