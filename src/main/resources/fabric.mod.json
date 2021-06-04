@@ -17,7 +17,8 @@
       "com.jamalam360.NoTrample"
     ],
     "client": [],
-    "server": []
+    "server": [],
+    "modmenu": ["com.jamalam360.ModMenuIntegration"]
   },
   "mixins": [
     "notramplefabric.mixins.json"
