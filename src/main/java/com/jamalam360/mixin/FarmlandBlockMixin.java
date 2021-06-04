@@ -29,9 +29,11 @@ public class FarmlandBlockMixin extends Block {
             Iterable<ItemStack> armorItems = entity.getArmorItems();
 
             for (ItemStack itemStack : armorItems) {
-                if (((ArmorItem) itemStack.getItem()).getSlotType() == EquipmentSlot.FEET) {
-                    if (EnchantmentHelper.getLevel(Enchantments.FEATHER_FALLING, itemStack) > 0){
-                        info.cancel();
+                if(itemStack.getItem() instanceof ArmorItem) {
+                    if (((ArmorItem) itemStack.getItem()).getSlotType() == EquipmentSlot.FEET) {
+                        if (EnchantmentHelper.getLevel(Enchantments.FEATHER_FALLING, itemStack) > 0) {
+                            info.cancel();
+                        }
                     }
                 }
             }
