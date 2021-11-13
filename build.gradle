@@ -1,11 +1,12 @@
 plugins {
-    id 'fabric-loom' version '0.6-SNAPSHOT'
+    id 'fabric-loom' version '0.9.+'
+    id 'io.github.juuxel.loom-quiltflower' version '1.3.0'
     id 'maven-publish'
     id 'org.cadixdev.licenser' version '0.6.0'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -31,9 +32,8 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    modImplementation("com.terraformersmc:modmenu:1.16.9")
 
-    modApi("me.shedaniel.cloth:cloth-config-fabric:4.11.26")
+    modApi("me.shedaniel.cloth:cloth-config-fabric:5.1.40")
 
     include(modImplementation("com.oroarmor:oro-config-fabric:${project.oro_config_version}"))
 }
